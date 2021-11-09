@@ -2,7 +2,7 @@
 
 ## Deployment Test
 - BACKEND: https://github.com/HaninHaidrah/auth-api 
-- PULL request: https://github.com/HaninHaidrah/bearer-auth/pull/1 
+- PULL request: https://github.com/HaninHaidrah/auth-api/pull/1 
 - Heroku: https://auth-app-hanin.herokuapp.com/signup 
 
 ## SET UP:
