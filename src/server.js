@@ -29,7 +29,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(logger);
 
 app.use(authRoutes);
-app.use('/api/v1', v1Routes);
+app.use('/todo', v1Routes);
 app.use('/api/v2', v2Routes);
 
 
