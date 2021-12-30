@@ -20,7 +20,8 @@ app.use(morgan('dev'));
 const v1Routes = require('./routes/v1.js');
 const v2Routes=   require('./routes/v2.js');
 const authRoutes = require('./routes/auth.routes');
-const v3Routes=require('./routes/v3')
+const v3Routes=require('./routes/v3');
+const hotelRouter=require('./routes/hotel')
 
 
 app.use(express.json());
@@ -34,6 +35,7 @@ app.use('/todo', v1Routes);
 app.use('/items', v3Routes);
 
 app.use('/api/v2', v2Routes);
+app.use(hotelRouter)
 
 
 // MIDDLEWARES for error
