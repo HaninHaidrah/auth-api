@@ -8,6 +8,8 @@ const router = express.Router();
 
 router.post('/hotel',handleCreateHotels);
 router.get('/hotel',handleGetHotels)
+router.get('/hotel/:id',handleGetOne)
+
 router.post('/hotel/rooms',handleCreateRooms);
 router.get('/hotel/rooms',handleGetRooms)
 
@@ -19,6 +21,11 @@ async function handleCreateHotels(req,res){
 async function handleGetHotels(req,res){
     // const id=req.params.id
     const allRecords= await hotel.get();
+    res.status(200).json(allRecords)
+}
+async function handleGetOne(req,res){
+    const id=req.params.id
+    const allRecords= await hotel.get(id);
     res.status(200).json(allRecords)
 }
 async function handleCreateRooms(req,res){
