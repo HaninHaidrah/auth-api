@@ -7,6 +7,7 @@ const itemModel = require("../models/items.model");
 const electronicModel = require("../models/electronics");
 const hotelModel = require("./hotels.model");
 const roomModel = require("./roomModel.model");
+const homeModel=require('./houseModel.model')
 const Collection = require("../models/data-collection");
 
 const { Sequelize, DataTypes } = require("sequelize");
@@ -31,6 +32,7 @@ const items = itemModel(sequelize, DataTypes);
 const electronics = electronicModel(sequelize, DataTypes);
 const hotel = hotelModel(sequelize, DataTypes);
 const room = roomModel(sequelize, DataTypes);
+const house=homeModel(sequelize,DataTypes)
 
 // hotel.hasMany(room, { foreignKey: "hotelid", sourceKey: "id" });
 // room.belongsTo(hotel, { foreignKey: "hotelid", targetKey: "id" });
@@ -43,4 +45,5 @@ module.exports = {
   electronics: new Collection(electronics),
   hotel: new Collection(hotel),
   room: new Collection(room),
+  house: new Collection(house)
 };
